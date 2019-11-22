@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Horario</title>
+    <script src="Horario.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/Horario.css">
+    <link rel="stylesheet" type="text/css" media="print" href="css/Horario_print.css">
+</head>
+
+<body>
+    <h1>HORARIO INTERACTIVO</h1>
+
+    <div id="sema" class="disp">
+        <button onclick="semana('completa')"><h2>SEMANA COMPLETA</h2><br><img src="img/hor_1.png"></button>
+        <button onclick="semana('habil')"><h2>DÍAS HÁBILES</h2><br><img src="img/hor_2.png"></button>
+    </div>
+
+    <div id="hor" style="display: none;">
+        <input type="time" id="hor_ini" value="00:00"> - <input type="time" id="hor_fin" value="00:00"><br>
+        <br><br>
+
+        <div class="disp">
+            <button onclick="anyadir_hora()">AÑADIR HORA</button><br><br>
+            <button onclick="elminar_hora()">ELIMINAR ÚLTIMA HORA</button>
+        </div>
+        <br><br>
+        <label>HORAS REGISTRADAS</label>
+        <br>
+        <div id="array_horas"></div>
+        <button class="el_hor" onclick="back('primera')">RETROCEDER</button>
+        <button class="el_hor" onclick="cargar_tabla()">CARGAR TABLA</button>
+
+    </div>
+
+    <div id="main" style="display: none;">
+        <div class="disp">
+            <button onclick="agregar_dato()">Añadir Evento</button>
+            <button onclick="eliminar_dato()">Eliminar Evento</button>
+            <button onclick="window.print();">Imprimir Horario</button>
+        </div>
+        <div class="oculto">
+            <div id="long_hor"></div>
+            <div id="hora_sel"></div>
+            <div id="dia_sel"></div>
+            <div id="text_sel"></div>
+            <div id="col_sel"></div>
+            <div id="col_let_sel"></div>
+            <div id="del_hora_sel"></div>
+            <div id="del_dia_sel"></div>
+            <div id="tipo_semana"></div>
+        </div>
+        <div id="calendar"></div>
+        <button class="el_hor" onclick="back('segunda')">RETROCEDER</button>
+    </div>
+</body>
+
+</html>
