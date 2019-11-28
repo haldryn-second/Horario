@@ -124,7 +124,7 @@ function eliminar() {
 //tiene ejecuta la tabla basada en el array multidimenional
 
 function cargar_datos() {
-    if (screen.width < 600) { alert("La aplicación requiere de un monitor superior a 600px de ancho para poder ejecutarse" + "\n" + "Su resolución actual es de " + screen.width + "px de ancho"); } else if ((navegador != "Chr") && (navegador != "Moz") && (navegador != "Saf")) { alert("La aplicación no es compatible con su navegador" + "\n" + "Navegadores soportados: Google Chrome, Mozilla Firefox y Safari"); } else {
+    if (screen.width < 300) { alert("La aplicación requiere de un monitor superior a 600px de ancho para poder ejecutarse" + "\n" + "Su resolución actual es de " + screen.width + "px de ancho"); } else if ((navegador != "Chr") && (navegador != "Moz") && (navegador != "Saf")) { alert("La aplicación no es compatible con su navegador" + "\n" + "Navegadores soportados: Google Chrome, Mozilla Firefox y Safari"); } else {
         res = "<table>";
         for (i = 0; i < horas.length; i++) {
             if (i == 0) res = res + "<tr><td style='background:black;'></td>";
